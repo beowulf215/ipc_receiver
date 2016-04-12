@@ -87,11 +87,12 @@ void ipreceiver::pinger()
             if (!exitCode)
             {
                 qDebug() << "Host Reachable!";
+                //ssv_2->subsystems[ssv_2->index[i].subindex].hosts[ssv_2->index[i].hostindex].status = "ONLINE";
             }
             else
             {
                 qDebug() << "Host Unreachable...";
-                ssv_2->subsystems[ssv_2->index[i].subindex].hosts[ssv_2->index[i].hostindex].status = "UNREACHABLE";
+                ssv_2->subsystems[ssv_2->index[i].subindex].hosts[ssv_2->index[i].hostindex].status = "OFFLINE";
                 qDebug() << ssv_2->index[i].hostdns << " status set to " << ssv_2->subsystems[ssv_2->index[i].subindex].hosts[ssv_2->index[i].hostindex].status;
             }
         }
